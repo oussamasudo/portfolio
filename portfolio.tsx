@@ -2,6 +2,8 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Brain } from "lucide-react";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Github,
@@ -18,6 +20,9 @@ import {
   Cpu,
   Layers,
   Coffee,
+  WholeWord,
+  Factory,
+  Book,
 } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -67,18 +72,31 @@ export default function DeveloperPortfolio() {
 
   const projects = [
     {
-      title: "Votre Projet 1",
-      description: "Description détaillée de votre projet, ses fonctionnalités principales et son impact.",
-      image: "/images/projet1.jpg", // Chemin vers votre image
-      technologies: ["React", "Node.js", "PostgreSQL"], // Vos vraies technologies
-      github: "https://github.com/votre-username/projet1", // Votre vrai lien GitHub
+      title: "I.M.M",
+      description: "The Industrial Machine Maintenance System is an application that manages machine operations, maintenance requests, and work orders. It allows users to track machine performance, create maintenance tasks, and schedule work efficiently, ensuring timely resolutions and reducing downtime.",
+image: "/OLP-pica.png"
+, // Chemin vers votre image
+      technologies: ["React", "next ", "MySql"], // Vos vraies technologies
+      github: "https://github.com/oussamasudo/IMM", // Votre vrai lien GitHub
       live: "https://votre-projet1.com", // Votre vrai lien de démo
-      icon: <Globe className="h-6 w-6" />, // Icône appropriée
+  icon: <Factory className="h-6 w-6" />
+
     },
+    {
+  title: "E-library",
+  description: "E-library is a web-based learning platform designed to facilitate online education. It features interactive videos, quizzes, and a robust progress tracking system to enhance the learning experience. The app is ideal for students, educators, and lifelong learners looking to access educational content and track their growth effectively on any device.",
+  image: "/OLP-pica.png",
+  technologies: ["React", "Firebase", "Redux", "Next.js"],
+  github: "https://github.com/votre-username/elearning-app",
+  live: "https://votre-projet1.com", // Update with your actual demo link
+  icon: <Book className="h-6 w-6" />, // Book icon still appropriate for educational context
+},
+
+
     {
       title: "Application Mobile E-Learning",
       description: "App mobile pour l'apprentissage en ligne avec vidéos, quiz interactifs et suivi de progression.",
-      image: "/images/elearning-app.jpg",
+image: "/OLP-pica.png",
       technologies: ["React Native", "Firebase", "Redux", "Expo"],
       github: "https://github.com/votre-username/elearning-app",
       live: "https://play.google.com/store/apps/details?id=com.votre.app",
@@ -249,12 +267,10 @@ export default function DeveloperPortfolio() {
             <div className="md:col-span-2">
               <div className="mb-8">
                 <p className="text-lg mb-6">
-                  Full stack developer with over 2 years of experience in building high-performance web and mobile applications.
-      Passionate about new technologies and innovation.
+                  Full Stack Developer with over 3 years of experience in building high-performance web and mobile applications. Passionate about innovation, artificial intelligence, and data-driven solutions that push technology forward.
                 </p>
                 <p className="text-lg mb-6">
-                       I love solving complex problems with elegant code and contributing to open source projects. Always seeking learning and self-improvement.
-
+I enjoy solving complex problems with clean and efficient code, contributing to open source projects, and continuously seeking opportunities for learning and growth.
                 </p>
 
                 {/* Code snippet style bio */}
@@ -265,19 +281,19 @@ export default function DeveloperPortfolio() {
       name: <span className="text-green-400">"OUSSAMA HAFDOUNE"</span>,
     </div>
     <div>
-      role: <span className="text-green-400">"Full Stack Developer"</span>,
+      role: <span className="text-green-400">"Full Stack Developer with expertise in AI Agents and Data Analysis"</span>,
     </div>
     <div>
-      experience: <span className="text-yellow-400">+2</span>,
+      experience: <span className="text-yellow-400">+3</span>,
     </div>
     <div>
-      location: <span className="text-green-400">"Marrakech, Morocco"</span>,
+      location: <span className="text-green-400">"Tangier , Morocco"</span>,
     </div>
     <div>
       languages: [<span className="text-green-400">"JavaScript", "TypeScript", "Python"</span>],
     </div>
     <div>
-      passion: <span className="text-green-400">"Building amazing apps with optimized database solutions. Passionate about designing scalable databases, writing efficient queries, and ensuring data integrity across applications. I thrive on solving complex data problems, implementing efficient data models, and optimizing SQL and NoSQL queries for high-performance systems. My goal is to always ensure that the backbone of every application, the database, runs smoothly and efficiently."</span>,
+      passion: <span className="text-green-400">"Building smart and efficient applications powered by optimized databases and AI. Passionate about data modeling, query optimization, and transforming data into intelligent, high-performance solutions."</span>,
     </div>
     <div>
       coffee: <span className="text-yellow-400">true</span>
@@ -336,6 +352,15 @@ export default function DeveloperPortfolio() {
                     <p className="text-xs text-muted-foreground">Docker, AWS, CI/CD</p>
                   </CardContent>
                 </Card>
+                {/* Nouvelle carte AI */}
+                
+<Card className="bg-card border-primary/20 hover:border-primary/50 transition-colors">
+  <CardContent className="p-4 text-center">
+    <Brain className="h-6 w-6 mx-auto mb-2 text-primary" />
+    <h3 className="font-semibold mb-1 font-mono text-sm">AI</h3>
+    <p className="text-xs text-muted-foreground">Machine Learning, Deep Learning, NLP, PyTorch, TensorFlow</p>
+  </CardContent>
+</Card>
               </div>
             </div>
           </div>
@@ -366,48 +391,49 @@ export default function DeveloperPortfolio() {
           </Card>
         </div>
 
-        {/* Education Section */}
-        <div key="2" className="relative flex items-center mb-8">
-          <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <Code2 className="h-5 w-5 text-white" />
-          </div>
-          <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
-            <CardContent className="p-6">
-              <h3 className="font-bold font-mono text-primary">BSc in Computer Science</h3>
-              <p className="text-muted-foreground">FST Marrakech</p>
-              <p className="text-sm text-muted-foreground font-mono">2021 - 2024</p>
-            </CardContent>
-          </Card>
-        </div>
+       {/* Education Section 1 */}
+<div key="3" className="relative flex items-center mb-8">
+  <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+    <Code2 className="h-5 w-5 text-white" />
+  </div>
+  <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
+    <CardContent className="p-6">
+      <h3 className="font-bold font-mono text-primary">BSc in Distributed Computer Systems</h3>
+      <p className="text-muted-foreground">FST Marrakech</p>
+      <p className="text-sm text-muted-foreground font-mono">2021 - 2024</p>
+    </CardContent>
+  </Card>
+</div>
 
-        {/* Education Section 2 */}
-        <div key="4" className="relative flex items-center mb-8">
-          <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <Server className="h-5 w-5 text-white" />
-          </div>
-          <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
-            <CardContent className="p-6">
-              <h3 className="font-bold font-mono text-primary">Master's in Distributed Computing Systems</h3>
-              <p className="text-muted-foreground">FST Marrakech</p>
-              <p className="text-sm text-muted-foreground font-mono">2023</p>
-            </CardContent>
-          </Card>
-        </div>
+{/* Education Section 2 */}
+<div key="4" className="relative flex items-center mb-8">
+  <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+    <Server className="h-5 w-5 text-white" />
+  </div>
+  <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
+    <CardContent className="p-6">
+      <h3 className="font-bold font-mono text-primary">Master's in AI & Data Analysis</h3>
+      <p className="text-muted-foreground">FST Marrakech</p>
+      <p className="text-sm text-muted-foreground font-mono">(2025 - 2026)</p>
+    </CardContent>
+  </Card>
+</div>
 
-        {/* Additional Skills Section */}
-        <div key="5" className="relative flex items-center mb-8">
-          <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <Cpu className="h-5 w-5 text-white" />
-          </div>
-          <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
-            <CardContent className="p-6">
-              <h3 className="font-bold font-mono text-primary">Additional Skills</h3>
-              <p className="text-muted-foreground">
-                UML, Merise, Linux (Ubuntu, Kali), Windows Server, VMware, VirtualBox
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+{/* Additional Skills Section */}
+<div key="5" className="relative flex items-center mb-8">
+  <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+    <Cpu className="h-5 w-5 text-white" />
+  </div>
+  <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
+    <CardContent className="p-6">
+      <h3 className="font-bold font-mono text-primary">Additional Skills</h3>
+      <p className="text-muted-foreground">
+        UML, Merise, Linux (Ubuntu, Kali), Windows Server, VMware, VirtualBox
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
       </div>
     </div>
   </div>
