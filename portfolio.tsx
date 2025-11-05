@@ -399,7 +399,7 @@ I enjoy solving complex problems with clean and efficient code, contributing to 
   <Card className="ml-12 bg-card border-primary/20 hover:border-primary/50 transition-all hover:animate-glow">
     <CardContent className="p-6">
       <h3 className="font-bold font-mono text-primary">BSc in Distributed Computer Systems</h3>
-      <p className="text-muted-foreground">FST Marrakech</p>
+      <p className="text-muted-foreground">FST MARRAKECH </p>
       <p className="text-sm text-muted-foreground font-mono">2021 - 2024</p>
     </CardContent>
   </Card>
